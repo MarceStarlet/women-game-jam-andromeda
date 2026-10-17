@@ -6,6 +6,7 @@ Documento de convenciones y estructura de carpetas para el proyecto.
 ---
 
 ## 1. Estructura de Carpetas
+```
 proyecto/
 ├── .gitignore
 ├── .gitattributes
@@ -45,7 +46,7 @@ proyecto/
 ├── autoload/                   # Scripts que se usan como Autoload (singletons)
 │
 └── addons/                     # Plugins de terceros (Asset Library)
-
+```
 
 ### Notas sobre la estructura
 - Agrupa los assets **cerca de las escenas** que los usan cuando el proyecto crezca.
