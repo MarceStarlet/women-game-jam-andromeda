@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mewhvvecrxwf"
-path="res://.godot/imported/Overlay_Pausa.png-c678841f593f40101bb6a4d4f0cb37a5.ctex"
+path="res://.godot/imported/Overlay_Pausa.png-330566b8cf16b7bb75154f1c690c7546.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Arte/UI/Overlay_Pausa.png"
-dest_files=["res://.godot/imported/Overlay_Pausa.png-c678841f593f40101bb6a4d4f0cb37a5.ctex"]
+source_file="res://Assets/Arte/UI/Overlay_Pausa.png"
+dest_files=["res://.godot/imported/Overlay_Pausa.png-330566b8cf16b7bb75154f1c690c7546.ctex"]
 
 [params]
 

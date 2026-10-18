@@ -4,27 +4,27 @@
 [ext_resource type="Texture2D" uid="uid://b383iiq00smat" path="res://Assets/Arte/UI/comenzar_seleccionado.png" id="2_611wp"]
 [ext_resource type="Texture2D" uid="uid://b25lfryxs8nvn" path="res://Assets/Arte/UI/comenzar_hover.png" id="3_xpioy"]
 [ext_resource type="Texture2D" uid="uid://bxkffauab5v2k" path="res://Assets/Arte/UI/creditos_inactivo.png" id="4_kni6g"]
+[ext_resource type="Texture2D" uid="uid://bruamkq10yj62" path="res://Assets/Arte/UI/Creditos_seleccionado.png" id="5_kni6g"]
 [ext_resource type="Texture2D" uid="uid://cvxw075wlcqea" path="res://Assets/Arte/UI/salir_inactivo.png" id="5_nx6e2"]
 [ext_resource type="Texture2D" uid="uid://bx8bn4th6hyj7" path="res://Assets/Arte/UI/salir_seleccionado.png" id="6_dcvsf"]
+[ext_resource type="Texture2D" uid="uid://u304anxf37jd" path="res://Assets/Arte/UI/creditos_hover.png" id="6_nx6e2"]
 [ext_resource type="Texture2D" uid="uid://c4o70bdqshatx" path="res://Assets/Arte/UI/salir_hover.png" id="7_kcxxd"]
 [ext_resource type="Texture2D" uid="uid://2qq31h5yfky2" path="res://Assets/Arte/escenario/Nivel 1.png" id="8_palpy"]
+[ext_resource type="Texture2D" uid="uid://xej2iu0do2lq" path="res://Assets/Arte/UI/Logo.PNG" id="9_611wp"]
 
 [sub_resource type="GDScript" id="GDScript_7eb1j"]
 script/source = "extends Control
 
-
-
-
-func _on_texture_button_pressed() -> void:
-	pass # Replace with function body.
-
-
-func _on_creditos_button_pressed() -> void:
-	pass # Replace with function body.
+func _on_comenzar_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/levels/level_1/level_1.tscn\")
 
 
 func _on_salir_button_pressed() -> void:
-	get_tree().quit
+	get_tree().quit()
+
+
+func _on_creditos_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://creditos.tscn\")
 "
 
 [node name="MenuPrincipal" type="Control" unique_id=1712690951]
@@ -46,26 +46,24 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 114.93465
-offset_top = 28.32312
-offset_right = 339.93506
-offset_bottom = 270.5453
+offset_left = 146.91646
+offset_top = -3.5079346
+offset_right = 439.91644
+offset_bottom = 238.71423
 grow_vertical = 2
-theme_override_constants/separation = 65
+theme_override_constants/separation = 30
 
 [node name="comenzar_button" type="TextureButton" parent="VBoxContainer" unique_id=759836838]
 layout_mode = 2
 texture_normal = ExtResource("1_b574n")
 texture_pressed = ExtResource("2_611wp")
 texture_hover = ExtResource("3_xpioy")
-ignore_texture_size = true
 
 [node name="creditos_button" type="TextureButton" parent="VBoxContainer" unique_id=781875542]
 layout_mode = 2
 texture_normal = ExtResource("4_kni6g")
-texture_pressed = ExtResource("2_611wp")
-texture_hover = ExtResource("3_xpioy")
-ignore_texture_size = true
+texture_pressed = ExtResource("5_kni6g")
+texture_hover = ExtResource("6_nx6e2")
 
 [node name="salir_button" type="TextureButton" parent="VBoxContainer" unique_id=1698153663]
 layout_mode = 2
@@ -73,10 +71,29 @@ texture_normal = ExtResource("5_nx6e2")
 texture_pressed = ExtResource("6_dcvsf")
 texture_hover = ExtResource("7_kcxxd")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=561088319]
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1091341843]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -348.80167
+offset_top = -1120.0367
+offset_right = -308.80167
+offset_bottom = -1080.0367
+grow_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer2" unique_id=1607220402]
+position = Vector2(653.40137, 402.1212)
+scale = Vector2(0.31937355, 0.25533113)
+texture = ExtResource("9_611wp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=561088319]
 z_index = -1
-position = Vector2(751.5726, 364.3341)
-scale = Vector2(0.6974033, 0.6974033)
+position = Vector2(762.5664, 558.38586)
+scale = Vector2(1.0567582, 1.0567584)
 texture = ExtResource("8_palpy")
 
 [connection signal="pressed" from="VBoxContainer/comenzar_button" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/comenzar_button" to="." method="_on_comenzar_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/creditos_button" to="." method="_on_creditos_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/salir_button" to="." method="_on_salir_button_pressed"]
