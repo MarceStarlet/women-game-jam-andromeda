@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dqlam6ojskj74"]
+
+[ext_resource type="Texture2D" uid="uid://cd5daotw64knv" path="res://assets/art/temp/border.png" id="1_awepp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aas6h"]
+size = Vector2(266.625, 139.5)
+
+[node name="AnimatableBody2DB1" type="AnimatableBody2D" unique_id=543312767]
+
+[node name="Block" type="Sprite2D" parent="." unique_id=2034578070]
+position = Vector2(68.5, 69.5)
+texture = ExtResource("1_awepp")
+
+[node name="Block2" type="Sprite2D" parent="." unique_id=1873212675]
+position = Vector2(198, 70)
+texture = ExtResource("1_awepp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1164472385]
+position = Vector2(135, 72)
+shape = SubResource("RectangleShape2D_aas6h")

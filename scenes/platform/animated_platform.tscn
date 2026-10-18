@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://dlviyphfbq0wu"]
 
+[ext_resource type="Script" uid="uid://dalq68yv3eb85" path="res://Scripts/components/path_flow_platform.gd" id="1_fdsqs"]
 [ext_resource type="Texture2D" uid="uid://d0xu6k5fo2888" path="res://assets/art/temp/platform.png" id="1_occkw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aas6h"]
 size = Vector2(272.5, 138)
 
 [sub_resource type="Animation" id="Animation_fdsqs"]
-length = 0.001
+length = 5.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -14,10 +16,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(0, 1)]
+"values": [Vector2(0, 0), Vector2(300, 0), Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_ih3is"]
@@ -43,11 +45,11 @@ _data = {
 &"move": SubResource("Animation_ih3is")
 }
 
-[node name="AnimatedPlatform" type="Node2D" unique_id=686158297]
-position = Vector2(1, -2)
+[node name="AnimatedPlatformHorizontal" type="Node2D" unique_id=686158297]
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=1135928449]
-position = Vector2(0, 1)
+sync_to_physics = false
+script = ExtResource("1_fdsqs")
 
 [node name="Block" type="Sprite2D" parent="AnimatableBody2D" unique_id=1239576570]
 position = Vector2(68.5, 69.5)
@@ -63,4 +65,4 @@ shape = SubResource("RectangleShape2D_aas6h")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D" unique_id=1348806164]
 libraries/ = SubResource("AnimationLibrary_i6rdu")
-autoplay = &"move"
+autoplay = &"RESET"
