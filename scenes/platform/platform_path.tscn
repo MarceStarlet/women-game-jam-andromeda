@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bibv4bw46x2kv"]
+
+[ext_resource type="PackedScene" uid="uid://dqlam6ojskj74" path="res://scenes/platform/animated_platform_vertical_body.tscn" id="1_vpmt6"]
+
+[sub_resource type="Curve2D" id="Curve2D_61lxu"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 184, 0, 0, 0, 0, -6, 296, 0, 0, 0, 0, -4, 408, 0, 0, 0, 0, 2, 546)
+}
+point_count = 5
+
+[node name="platform_path" type="Path2D" unique_id=791781891]
+curve = SubResource("Curve2D_61lxu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=412921427]
+rotates = false
+
+[node name="AnimatableBody2DB1" parent="PathFollow2D" unique_id=543312767 instance=ExtResource("1_vpmt6")]
+position = Vector2(-125, -65)
