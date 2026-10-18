@@ -88,6 +88,7 @@ texture_normal = ExtResource("8_o25ev")
 texture_pressed = ExtResource("9_u0tsi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1419479041]
+z_index = -1
 position = Vector2(569.7778, 320.5)
 scale = Vector2(0.60648143, 0.60648143)
 texture = ExtResource("6_cssh3")
