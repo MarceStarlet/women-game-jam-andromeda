@@ -1,6 +1,31 @@
 [gd_scene format=3 uid="uid://3q2x8juui40q"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_01get"]
+[ext_resource type="Texture2D" uid="uid://4wmcwxpll1c6" path="res://Assets/Arte/UI/comenzar_inactivo.png" id="1_b574n"]
+[ext_resource type="Texture2D" uid="uid://b383iiq00smat" path="res://Assets/Arte/UI/comenzar_seleccionado.png" id="2_611wp"]
+[ext_resource type="Texture2D" uid="uid://b25lfryxs8nvn" path="res://Assets/Arte/UI/comenzar_hover.png" id="3_xpioy"]
+[ext_resource type="Texture2D" uid="uid://bxkffauab5v2k" path="res://Assets/Arte/UI/creditos_inactivo.png" id="4_kni6g"]
+[ext_resource type="Texture2D" uid="uid://cvxw075wlcqea" path="res://Assets/Arte/UI/salir_inactivo.png" id="5_nx6e2"]
+[ext_resource type="Texture2D" uid="uid://bx8bn4th6hyj7" path="res://Assets/Arte/UI/salir_seleccionado.png" id="6_dcvsf"]
+[ext_resource type="Texture2D" uid="uid://c4o70bdqshatx" path="res://Assets/Arte/UI/salir_hover.png" id="7_kcxxd"]
+[ext_resource type="Texture2D" uid="uid://2qq31h5yfky2" path="res://Assets/Arte/escenario/Nivel 1.png" id="8_palpy"]
+
+[sub_resource type="GDScript" id="GDScript_7eb1j"]
+script/source = "extends Control
+
+
+
+
+func _on_texture_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_creditos_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_salir_button_pressed() -> void:
+	get_tree().quit
+"
 
 [node name="MenuPrincipal" type="Control" unique_id=1712690951]
 layout_mode = 3
@@ -13,31 +38,45 @@ offset_right = -3.0
 offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.0005686, 0.99908286)
+script = SubResource("GDScript_7eb1j")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1665939351]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -94.5
-offset_top = -93.5
-offset_right = 94.5
-offset_bottom = 93.5
-grow_horizontal = 2
+offset_left = 114.93465
+offset_top = 28.32312
+offset_right = 339.93506
+offset_bottom = 270.5453
 grow_vertical = 2
+theme_override_constants/separation = 65
 
-[node name="Comenzar" type="Button" parent="VBoxContainer" unique_id=1021614020]
+[node name="comenzar_button" type="TextureButton" parent="VBoxContainer" unique_id=759836838]
 layout_mode = 2
-theme_type_variation = &"FlatButton"
-theme_override_colors/font_color = Color(0, 0.33999997, 0.6, 1)
-theme_override_colors/font_pressed_color = Color(0.4703344, 0.06358362, 0.56815135, 1)
-theme_override_colors/font_hover_color = Color(0.9685028, 0.9443441, 0.927463, 1)
-theme_override_styles/normal = SubResource("StyleBoxTexture_01get")
-toggle_mode = true
-text = "COMENZAR"
+texture_normal = ExtResource("1_b574n")
+texture_pressed = ExtResource("2_611wp")
+texture_hover = ExtResource("3_xpioy")
+ignore_texture_size = true
 
-[node name="Salir" type="Button" parent="VBoxContainer" unique_id=262402641]
+[node name="creditos_button" type="TextureButton" parent="VBoxContainer" unique_id=781875542]
 layout_mode = 2
-text = "SALIR"
+texture_normal = ExtResource("4_kni6g")
+texture_pressed = ExtResource("2_611wp")
+texture_hover = ExtResource("3_xpioy")
+ignore_texture_size = true
+
+[node name="salir_button" type="TextureButton" parent="VBoxContainer" unique_id=1698153663]
+layout_mode = 2
+texture_normal = ExtResource("5_nx6e2")
+texture_pressed = ExtResource("6_dcvsf")
+texture_hover = ExtResource("7_kcxxd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=561088319]
+z_index = -1
+position = Vector2(751.5726, 364.3341)
+scale = Vector2(0.6974033, 0.6974033)
+texture = ExtResource("8_palpy")
+
+[connection signal="pressed" from="VBoxContainer/comenzar_button" to="." method="_on_texture_button_pressed"]
