@@ -1,9 +1,14 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://b11htjg5ql3al"]
 
+[ext_resource type="Texture2D" uid="uid://b72lan4hf8mtd" path="res://assets/Arte/player/caída.png" id="1_kjt23"]
 [ext_resource type="Texture2D" uid="uid://bko0lrqlijsn7" path="res://assets/Arte/player/Ciclo de caminata.png" id="1_rgghv"]
 [ext_resource type="Texture2D" uid="uid://bqxsqmiux2j4k" path="res://assets/Arte/player/Dash.png" id="2_kjt23"]
 [ext_resource type="Texture2D" uid="uid://bbmswqbewd7mg" path="res://assets/Arte/player/Idle.png" id="3_6q2wb"]
 [ext_resource type="Texture2D" uid="uid://s65w413rjpr4" path="res://assets/Arte/player/Salto.png" id="4_yes0i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yes0i"]
+atlas = ExtResource("1_kjt23")
+region = Rect2(0, 0, 270, 270)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c4i4m"]
 atlas = ExtResource("1_rgghv")
@@ -51,6 +56,14 @@ region = Rect2(273, 0, 273, 270)
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yes0i")
+}],
+"loop": 1,
+"name": &"caida",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_c4i4m")

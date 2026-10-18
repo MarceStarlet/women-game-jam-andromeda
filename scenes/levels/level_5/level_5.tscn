@@ -77,7 +77,7 @@ offset_left = 1215.0
 offset_top = 270.0
 offset_right = 2160.0
 offset_bottom = 405.0
-texture = ExtResource("2_mxx4w")
+texture = ExtResource("5_vvoq0")
 stretch_mode = 1
 
 [node name="Block4" type="CollisionShape2D" parent="Terrain" unique_id=1136804693]

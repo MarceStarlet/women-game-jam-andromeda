@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://d320jvqts0cgu"]
 
-[ext_resource type="PackedScene" uid="uid://ci3wyjc1dv5by" path="res://scenes/levels/level_3.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://b8k5cd5185o03" path="res://scenes/levels/level_4.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://ci3wyjc1dv5by" path="res://scenes/levels/level_3/level_3.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://b8k5cd5185o03" path="res://scenes/levels/level_4/level_4.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://tbimhjuyr7hh" path="res://scenes/characters/player.tscn" id="3"]
 
 [node name="TestLevels" type="Node2D" unique_id=2073247237]
+position = Vector2(-403, -1836)
 
 [node name="Level4" parent="." unique_id=1156843261 instance=ExtResource("2")]
 position = Vector2(-2, 8)

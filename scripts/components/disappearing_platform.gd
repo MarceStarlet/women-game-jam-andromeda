@@ -8,7 +8,7 @@ extends StaticBody2D
 const TILE := 135.0
 
 @export var width_tiles := 2
-@export var delay := 0.5               # segundos entre pisarla y desaparecer
+@export var delay := 0.45              # segundos entre pisarla y desaparecer
 @export var texture: Texture2D   # vacío = usa assets/art/environment/block.png
 @export var tint := Color(0.7, 1.0, 0.8)        # blanco = sin tinte
 @export var height_tiles := 1

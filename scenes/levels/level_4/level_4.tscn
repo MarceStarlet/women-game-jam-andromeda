@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c2ws2kc2r4phf" path="res://assets/Arte/escenario/Nivel 4.png" id="1_anwe6"]
 [ext_resource type="Texture2D" uid="uid://csr6b74e2unms" path="res://assets/Arte/plataformas2/4.PNG" id="3_5vn0v"]
+[ext_resource type="Texture2D" uid="uid://dqh2vryhwyl1d" path="res://assets/Arte/plataformas1/5.PNG" id="3_qpij7"]
 [ext_resource type="Texture2D" uid="uid://cra63tnena42o" path="res://assets/Arte/plataformas1/4.PNG" id="6_ts8eg"]
 [ext_resource type="Texture2D" uid="uid://catb33ia51u83" path="res://assets/Arte/capa_cercana/Nivel_4.PNG" id="7_5vn0v"]
 [ext_resource type="PackedScene" uid="uid://thn6r8r5hh27" path="res://scenes/levels/checkpoint.tscn" id="checkpoint"]
@@ -59,7 +60,7 @@ offset_left = 1485.0
 offset_top = 675.0
 offset_right = 1890.0
 offset_bottom = 810.0
-texture = ExtResource("3_5vn0v")
+texture = ExtResource("3_qpij7")
 stretch_mode = 1
 
 [node name="Block4" type="CollisionShape2D" parent="Terrain" unique_id=578167133]

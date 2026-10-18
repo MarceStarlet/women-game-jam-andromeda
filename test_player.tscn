@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene format=3 uid="uid://bto2glotarppv"]
 
-[ext_resource type="PackedScene" path="res://scenes/characters/player.tscn" id="1_player"]
-[ext_resource type="PackedScene" path="res://scenes/levels/checkpoint.tscn" id="2_checkpoint"]
-[ext_resource type="Script" path="res://test_debug.gd" id="3_debug"]
-[ext_resource type="Texture2D" path="res://assets/art/environment/block.png" id="4_block"]
+[ext_resource type="PackedScene" uid="uid://tbimhjuyr7hh" path="res://scenes/characters/player.tscn" id="1_player"]
+[ext_resource type="Texture2D" uid="uid://bli34k6meq501" path="res://assets/Arte/plataformas1/1.PNG" id="1_t8gcb"]
+[ext_resource type="PackedScene" uid="uid://thn6r8r5hh27" path="res://scenes/levels/checkpoint.tscn" id="2_checkpoint"]
+[ext_resource type="Texture2D" uid="uid://df3ebitqt1msp" path="res://assets/Arte/plataformas2/2.PNG" id="2_lclgp"]
+[ext_resource type="Script" uid="uid://dcjb5a5dkciep" path="res://test_debug.gd" id="3_debug"]
+[ext_resource type="Texture2D" uid="uid://l4064ojdmfpp" path="res://assets/Arte/plataformas1/3.PNG" id="3_jmb50"]
+[ext_resource type="Texture2D" uid="uid://dqh2vryhwyl1d" path="res://assets/Arte/plataformas1/5.PNG" id="4_ll00k"]
 
 [sub_resource type="RectangleShape2D" id="floor_shape"]
 size = Vector2(2700, 135)
@@ -11,80 +14,80 @@ size = Vector2(2700, 135)
 [sub_resource type="RectangleShape2D" id="platform_shape"]
 size = Vector2(405, 135)
 
-[node name="TestPlayer" type="Node2D"]
+[node name="TestPlayer" type="Node2D" unique_id=2013543972]
 
-[node name="Floor" type="StaticBody2D" parent="."]
+[node name="Floor" type="StaticBody2D" parent="." unique_id=2063040066]
 position = Vector2(0, 300)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1017671940]
 shape = SubResource("floor_shape")
 
-[node name="Look" type="TextureRect" parent="Floor"]
+[node name="Look" type="TextureRect" parent="Floor" unique_id=1702994866]
 texture_repeat = 2
 offset_left = -1350.0
 offset_top = -67.5
 offset_right = 1350.0
 offset_bottom = 67.5
-texture = ExtResource("4_block")
+texture = ExtResource("1_t8gcb")
 stretch_mode = 1
 
-[node name="Platform1" type="StaticBody2D" parent="."]
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=808806828]
 position = Vector2(500, -240)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=462912115]
 shape = SubResource("platform_shape")
 
-[node name="Look" type="TextureRect" parent="Platform1"]
+[node name="Look" type="TextureRect" parent="Platform1" unique_id=1317861860]
 texture_repeat = 2
 offset_left = -202.5
 offset_top = -67.5
 offset_right = 202.5
 offset_bottom = 67.5
-texture = ExtResource("4_block")
+texture = ExtResource("2_lclgp")
 stretch_mode = 1
 
-[node name="Platform2" type="StaticBody2D" parent="."]
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=2016032654]
 position = Vector2(-300, -645)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=617283914]
 shape = SubResource("platform_shape")
 
-[node name="Look" type="TextureRect" parent="Platform2"]
+[node name="Look" type="TextureRect" parent="Platform2" unique_id=1901841683]
 texture_repeat = 2
 offset_left = -202.5
 offset_top = -67.5
 offset_right = 202.5
 offset_bottom = 67.5
-texture = ExtResource("4_block")
+texture = ExtResource("3_jmb50")
 stretch_mode = 1
 
-[node name="Platform3" type="StaticBody2D" parent="."]
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=410380828]
 position = Vector2(400, -1050)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=520612947]
 shape = SubResource("platform_shape")
 
-[node name="Look" type="TextureRect" parent="Platform3"]
+[node name="Look" type="TextureRect" parent="Platform3" unique_id=2106302096]
 texture_repeat = 2
 offset_left = -202.5
 offset_top = -67.5
 offset_right = 202.5
 offset_bottom = 67.5
-texture = ExtResource("4_block")
+texture = ExtResource("4_ll00k")
 stretch_mode = 1
 
-[node name="Checkpoint1" parent="." instance=ExtResource("2_checkpoint")]
+[node name="Checkpoint1" parent="." unique_id=624205139 instance=ExtResource("2_checkpoint")]
 position = Vector2(-300, -712.5)
 
-[node name="Checkpoint2" parent="." instance=ExtResource("2_checkpoint")]
+[node name="Checkpoint2" parent="." unique_id=1706880473 instance=ExtResource("2_checkpoint")]
 position = Vector2(400, -1117.5)
 
-[node name="Player" parent="." instance=ExtResource("1_player")]
+[node name="Player" parent="." unique_id=1718876057 instance=ExtResource("1_player")]
 position = Vector2(0, 100)
 
-[node name="DebugLayer" type="CanvasLayer" parent="."]
+[node name="DebugLayer" type="CanvasLayer" parent="." unique_id=1613663136]
 
-[node name="DebugLabel" type="Label" parent="DebugLayer"]
+[node name="DebugLabel" type="Label" parent="DebugLayer" unique_id=108005741]
 offset_left = 16.0
 offset_top = 16.0
 offset_right = 600.0

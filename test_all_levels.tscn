@@ -1,31 +1,37 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene format=3 uid="uid://bklewsqfh5i4g"]
 
-[ext_resource type="PackedScene" path="res://scenes/levels/level_3.tscn" id="l3"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_4.tscn" id="l4"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_5.tscn" id="l5"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_6.tscn" id="l6"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_7.tscn" id="l7"]
-[ext_resource type="PackedScene" path="res://scenes/characters/player.tscn" id="player"]
+[ext_resource type="PackedScene" uid="uid://cf87i2rywdguo" path="res://scenes/levels/level_2/level_2.tscn" id="6_eq2sc"]
+[ext_resource type="PackedScene" uid="uid://d4wcpwfmwj66" path="res://scenes/levels/level_1/level_1.tscn" id="6_m5uue"]
+[ext_resource type="PackedScene" uid="uid://ci3wyjc1dv5by" path="res://scenes/levels/level_3/level_3.tscn" id="l3"]
+[ext_resource type="PackedScene" uid="uid://b8k5cd5185o03" path="res://scenes/levels/level_4/level_4.tscn" id="l4"]
+[ext_resource type="PackedScene" uid="uid://cuns20ccvkt7o" path="res://scenes/levels/level_5/level_5.tscn" id="l5"]
+[ext_resource type="PackedScene" uid="uid://b7uvj125tymtb" path="res://scenes/levels/level_6/level_6.tscn" id="l6"]
+[ext_resource type="PackedScene" uid="uid://bbcykptvlqsd1" path="res://scenes/levels/level_7/level_7.tscn" id="l7"]
+[ext_resource type="PackedScene" uid="uid://tbimhjuyr7hh" path="res://scenes/characters/player.tscn" id="player"]
 
-[node name="TestAllLevels" type="Node2D"]
+[node name="TestAllLevels" type="Node2D" unique_id=2010546935]
+position = Vector2(-571, -7325)
 
-[node name="Level7" parent="." instance=ExtResource("l7")]
+[node name="Level7" parent="." unique_id=1235908855 instance=ExtResource("l7")]
+position = Vector2(195, 22)
 
-[node name="Level6" parent="." instance=ExtResource("l6")]
-position = Vector2(0, 1080)
+[node name="Level6" parent="." unique_id=1611879231 instance=ExtResource("l6")]
+position = Vector2(195, 1102)
 
-[node name="Level5" parent="." instance=ExtResource("l5")]
-position = Vector2(0, 2160)
+[node name="Level5" parent="." unique_id=570485483 instance=ExtResource("l5")]
+position = Vector2(195, 2182)
 
-[node name="Level4" parent="." instance=ExtResource("l4")]
-position = Vector2(0, 3240)
+[node name="Level4" parent="." unique_id=1268199791 instance=ExtResource("l4")]
+position = Vector2(195, 3262)
 
-[node name="Level3" parent="." instance=ExtResource("l3")]
-position = Vector2(0, 4320)
+[node name="Level3" parent="." unique_id=1155515560 instance=ExtResource("l3")]
+position = Vector2(196, 4345)
 
-[node name="Player" parent="." instance=ExtResource("player")]
-position = Vector2(877.5, 5240)
+[node name="Level2" parent="." unique_id=1620241018 instance=ExtResource("6_eq2sc")]
+position = Vector2(196, 5439)
 
-[node name="Camera2D" parent="Player"]
-use_limits = true
-map_rect = Rect2(0, 0, 5670, 5400)
+[node name="Level1" parent="." unique_id=176055505 instance=ExtResource("6_m5uue")]
+position = Vector2(192, 6526)
+
+[node name="Player" parent="." unique_id=49925201 instance=ExtResource("player")]
+position = Vector2(992, 7145)

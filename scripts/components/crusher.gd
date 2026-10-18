@@ -13,10 +13,10 @@ enum State { WAIT_UP, FALL, WAIT_DOWN, RISE }
 @export var width_tiles := 1
 @export var height_tiles := 1
 @export var drop_tiles := 3.0
-@export var wait_up := 1.5
-@export var wait_down := 0.6
+@export var wait_up := 1.3
+@export var wait_down := 0.5
 @export var fall_speed := 12.0 * TILE
-@export var rise_speed := 3.0 * TILE
+@export var rise_speed := 3.5 * TILE
 @export var start_delay := 0.0
 @export var texture: Texture2D   # vacío = usa assets/art/environment/block.png
 @export var tint := Color(0.85, 0.7, 1.0)       # blanco = sin tinte

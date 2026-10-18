@@ -35,11 +35,3 @@ func _on_body_entered(body: Node2D) -> void:
 		return
 	done = true
 	reached.emit()
-	if show_test_message:
-		var layer := CanvasLayer.new()
-		var label := Label.new()
-		label.text = "Decir no también es decirte sí a ti misma."
-		label.add_theme_font_size_override("font_size", 40)
-		label.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
-		layer.add_child(label)
-		add_child(layer)
