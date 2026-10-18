@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://blue5vonp68h"]
+
+[ext_resource type="PackedScene" uid="uid://b0guo66a6km02" path="res://scenes/frame/frame.tscn" id="1_fngju"]
+[ext_resource type="Texture2D" uid="uid://3xsjyqjtwmq7" path="res://assets/art/background_n1.png" id="2_spwf2"]
+
+[node name="Level1" type="Node2D" unique_id=176055505]
+
+[node name="level" parent="." unique_id=1370190756 instance=ExtResource("1_fngju")]
+
+[node name="bkg_n1" type="Sprite2D" parent="level" unique_id=476362383]
+texture = ExtResource("2_spwf2")
+
+[node name="frame" parent="." unique_id=237317461 instance=ExtResource("1_fngju")]

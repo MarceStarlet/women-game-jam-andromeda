@@ -30,5 +30,3 @@ Guardar scenes para agrupar components de nodos
 	- Mundo (fondo, cielo, vegetacion, etc)
 	- Plataforma (rocas)
 	- Barra de poder
-	
-	
