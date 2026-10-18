@@ -80,5 +80,3 @@ scale = Vector2(0.6974033, 0.6974033)
 texture = ExtResource("8_palpy")
 
 [connection signal="pressed" from="VBoxContainer/comenzar_button" to="." method="_on_texture_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/creditos_button" to="." method="_on_creditos_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/salir_button" to="." method="_on_salir_button_pressed"]

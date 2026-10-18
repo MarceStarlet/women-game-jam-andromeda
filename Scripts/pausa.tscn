@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dsu17a7rksavo"]
+
+[ext_resource type="Texture2D" uid="uid://bigg5kmvywdpl" path="res://Assets/Arte/UI/salir_pausa_inactivo.png" id="1_bsn40"]
+[ext_resource type="Texture2D" uid="uid://bnoudssfr8kfp" path="res://Assets/Arte/UI/continuar_pausa_inactivo.png" id="1_vitnc"]
+[ext_resource type="Texture2D" uid="uid://bpp4pgct0sp1h" path="res://Assets/Arte/UI/salir_pausa_seleccionado.png" id="2_8x5d4"]
+[ext_resource type="Texture2D" uid="uid://4egjcd0m7jok" path="res://Assets/Arte/UI/menu_pausa_inactivo.png" id="2_f52vb"]
+[ext_resource type="Texture2D" uid="uid://o1x6vm5j8mxp" path="res://Assets/Arte/UI/salir_pausa_hover.png" id="3_rgu4r"]
+[ext_resource type="Texture2D" uid="uid://mewhvvecrxwf" path="res://Assets/Arte/UI/Overlay_Pausa.png" id="6_cssh3"]
+[ext_resource type="Texture2D" uid="uid://2hd54w1k5ovj" path="res://Assets/Arte/UI/menu_pausa_seleccionado.png" id="6_rgu4r"]
+[ext_resource type="Texture2D" uid="uid://b0isxfh2dlg4a" path="res://Assets/Arte/UI/menu_pausa_hover.png" id="7_cssh3"]
+
+[sub_resource type="GDScript" id="GDScript_7eb1j"]
+script/source = "extends Control
+func _on_salir_juego_pressed() -> void:
+	get_tree().quit
+
+
+func _on_continuar_pressed() -> void:
+	pass # Replace with function body.
+
+
+
+func _on_menu_principal_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://menu_principal.tscn\")
+"
+
+[node name="pausa" type="Control" unique_id=1212116880]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_7eb1j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1432593610]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 442.0
+offset_right = 954.0
+offset_bottom = 560.0
+
+[node name="salir_juego" type="TextureButton" parent="VBoxContainer" unique_id=419518006]
+layout_mode = 2
+texture_normal = ExtResource("1_bsn40")
+texture_pressed = ExtResource("2_8x5d4")
+texture_hover = ExtResource("3_rgu4r")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=811597531]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 210.0
+offset_right = 612.0
+offset_bottom = 308.0
+
+[node name="continuar" type="TextureButton" parent="VBoxContainer2" unique_id=1254641422]
+layout_mode = 2
+texture_normal = ExtResource("1_vitnc")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="." unique_id=433223441]
+layout_mode = 0
+offset_left = 430.0
+offset_top = 314.0
+offset_right = 826.0
+offset_bottom = 404.0
+
+[node name="MenuPrincipal" type="TextureButton" parent="VBoxContainer3" unique_id=568803766]
+layout_mode = 2
+texture_normal = ExtResource("2_f52vb")
+texture_pressed = ExtResource("6_rgu4r")
+texture_hover = ExtResource("7_cssh3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1419479041]
+position = Vector2(569.7778, 320.5)
+scale = Vector2(0.60648143, 0.60648143)
+texture = ExtResource("6_cssh3")
+
+[connection signal="pressed" from="VBoxContainer/salir_juego" to="." method="_on_salir_juego_pressed"]
+[connection signal="pressed" from="VBoxContainer2/continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="VBoxContainer3/MenuPrincipal" to="." method="_on_menu_principal_pressed"]
