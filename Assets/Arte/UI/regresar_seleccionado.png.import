@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmlbulasg03db"
-path="res://.godot/imported/regresar_seleccionado.png-4303d3c8b310c3fba35840ff53329696.ctex"
+path="res://.godot/imported/regresar_seleccionado.png-8f76fd1f77ffd0ae9e9239cb3039e33b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Arte/UI/regresar_seleccionado.png"
-dest_files=["res://.godot/imported/regresar_seleccionado.png-4303d3c8b310c3fba35840ff53329696.ctex"]
+source_file="res://assets/arte/UI/regresar_seleccionado.png"
+dest_files=["res://.godot/imported/regresar_seleccionado.png-8f76fd1f77ffd0ae9e9239cb3039e33b.ctex"]
 
 [params]
 

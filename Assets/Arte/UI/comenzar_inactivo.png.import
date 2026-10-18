@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4wmcwxpll1c6"
-path="res://.godot/imported/comenzar_inactivo.png-5cc39d12fc871a39e8f4656300ea43a1.ctex"
+path="res://.godot/imported/comenzar_inactivo.png-f21311c3d430fbbf32b73047120e94e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Arte/UI/comenzar_inactivo.png"
-dest_files=["res://.godot/imported/comenzar_inactivo.png-5cc39d12fc871a39e8f4656300ea43a1.ctex"]
+source_file="res://assets/arte/UI/comenzar_inactivo.png"
+dest_files=["res://.godot/imported/comenzar_inactivo.png-f21311c3d430fbbf32b73047120e94e5.ctex"]
 
 [params]
 

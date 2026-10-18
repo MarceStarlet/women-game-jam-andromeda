@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rk8fqda414ka"
-path="res://.godot/imported/continuar_pausa_hover.png-8533122f34c18b65c565169c3c5ac8a8.ctex"
+path="res://.godot/imported/continuar_pausa_hover.png-d3c826dc0355dea373a73612eeec295e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Arte/UI/continuar_pausa_hover.png"
-dest_files=["res://.godot/imported/continuar_pausa_hover.png-8533122f34c18b65c565169c3c5ac8a8.ctex"]
+source_file="res://assets/arte/UI/continuar_pausa_hover.png"
+dest_files=["res://.godot/imported/continuar_pausa_hover.png-d3c826dc0355dea373a73612eeec295e.ctex"]
 
 [params]
 
