@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b0guo66a6km02" path="res://scenes/frame/frame.tscn" id="1_fngju"]
 [ext_resource type="Texture2D" uid="uid://2qq31h5yfky2" path="res://assets/Arte/escenario/Nivel 1.png" id="2_fngju"]
+[ext_resource type="PackedScene" uid="uid://dlviyphfbq0wu" path="res://scenes/platform/animated_platform.tscn" id="3_5o1mp"]
 
 [node name="Level1" type="Node2D" unique_id=176055505]
 
@@ -11,3 +12,5 @@
 texture = ExtResource("2_fngju")
 
 [node name="frame" parent="." unique_id=237317461 instance=ExtResource("1_fngju")]
+
+[node name="AnimatedPlatform" parent="." unique_id=686158297 instance=ExtResource("3_5o1mp")]
