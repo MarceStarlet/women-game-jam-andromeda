@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://thn6r8r5hh27"]
+
+[ext_resource type="Script" uid="uid://d1rx7a87k818x" path="res://scripts/components/checkpoint.gd" id="1_checkpoint"]
+
+[sub_resource type="RectangleShape2D" id="checkpoint_shape"]
+size = Vector2(135, 270)
+
+[node name="Checkpoint" type="Area2D" unique_id=982901655]
+script = ExtResource("1_checkpoint")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1552250670]
+position = Vector2(0, -135)
+shape = SubResource("checkpoint_shape")
+
+[node name="Flag" type="ColorRect" parent="." unique_id=96193503]
+offset_left = -10.0
+offset_top = -270.0
+offset_right = 10.0
+color = Color(0.5, 0.5, 0.6, 1)

@@ -1,0 +1,87 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/characters/player.tscn" id="1_player"]
+[ext_resource type="PackedScene" path="res://scenes/levels/checkpoint.tscn" id="2_checkpoint"]
+[ext_resource type="Script" path="res://test_debug.gd" id="3_debug"]
+
+[sub_resource type="RectangleShape2D" id="floor_shape"]
+size = Vector2(2700, 135)
+
+[sub_resource type="RectangleShape2D" id="platform_shape"]
+size = Vector2(405, 135)
+
+[node name="TestPlayer" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(0, 300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("floor_shape")
+
+[node name="ColorRect" type="ColorRect" parent="Floor"]
+offset_left = -1350.0
+offset_top = -67.5
+offset_right = 1350.0
+offset_bottom = 67.5
+color = Color(0.9, 0.9, 0.9, 1)
+
+[node name="Platform1" type="StaticBody2D" parent="."]
+position = Vector2(500, -240)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1"]
+shape = SubResource("platform_shape")
+
+[node name="ColorRect" type="ColorRect" parent="Platform1"]
+offset_left = -202.5
+offset_top = -67.5
+offset_right = 202.5
+offset_bottom = 67.5
+color = Color(0.7, 0.8, 0.9, 1)
+
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2(-300, -645)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+shape = SubResource("platform_shape")
+
+[node name="ColorRect" type="ColorRect" parent="Platform2"]
+offset_left = -202.5
+offset_top = -67.5
+offset_right = 202.5
+offset_bottom = 67.5
+color = Color(0.7, 0.8, 0.9, 1)
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(400, -1050)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+shape = SubResource("platform_shape")
+
+[node name="ColorRect" type="ColorRect" parent="Platform3"]
+offset_left = -202.5
+offset_top = -67.5
+offset_right = 202.5
+offset_bottom = 67.5
+color = Color(0.7, 0.8, 0.9, 1)
+
+[node name="Checkpoint1" parent="." instance=ExtResource("2_checkpoint")]
+position = Vector2(-300, -712.5)
+
+[node name="Checkpoint2" parent="." instance=ExtResource("2_checkpoint")]
+position = Vector2(400, -1117.5)
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector2(0, 100)
+
+[node name="DebugLayer" type="CanvasLayer" parent="."]
+
+[node name="DebugLabel" type="Label" parent="DebugLayer"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 600.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 22
+script = ExtResource("3_debug")
