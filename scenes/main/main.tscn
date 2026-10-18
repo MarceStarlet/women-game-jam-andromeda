@@ -1,12 +1,9 @@
 [gd_scene format=3 uid="uid://cvqvus0yuicco"]
 
 [ext_resource type="PackedScene" uid="uid://blue5vonp68h" path="res://scenes/levels/level_1/level_1.tscn" id="1_iuonh"]
-[ext_resource type="PackedScene" uid="uid://dlviyphfbq0wu" path="res://scenes/platform/animated_platform.tscn" id="2_k2fmo"]
 
 [node name="main" type="Node2D" unique_id=793162809]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1875103344]
 
 [node name="level_1" parent="." unique_id=176055505 instance=ExtResource("1_iuonh")]
-
-[node name="animated_platform" parent="." unique_id=686158297 instance=ExtResource("2_k2fmo")]
