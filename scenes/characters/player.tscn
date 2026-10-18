@@ -1,37 +1,39 @@
 [gd_scene format=3 uid="uid://tbimhjuyr7hh"]
 
-[ext_resource type="Script" uid="uid://dsikjabtetm7n" path="res://scripts/characters/player.gd" id="1_player"]
+[ext_resource type="Script" uid="uid://donma7oytqwdc" path="res://scripts/characters/player.gd" id="1_player"]
 [ext_resource type="SpriteFrames" uid="uid://b11htjg5ql3al" path="res://assets/Arte/player/sprite_frames_player.tres" id="2_76oj4"]
-[ext_resource type="Script" uid="uid://b1lmu2oov33c4" path="res://scripts/components/level_camera.gd" id="2_camera"]
+[ext_resource type="Script" uid="uid://c4howfapfdtgj" path="res://scripts/components/level_camera.gd" id="2_camera"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dyp2m"]
 size = Vector2(187, 255)
 
 [node name="Player" type="CharacterBody2D" unique_id=776365094]
+position = Vector2(8, 0)
 script = ExtResource("1_player")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=79700165]
-position = Vector2(-3, 181)
-shape = SubResource("RectangleShape2D_dyp2m")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1863817314]
 position = Vector2(6, -154)
 process_callback = 0
-limit_left = -517
-limit_top = -756
-limit_right = 5153
-limit_bottom = 324
+limit_left = -508
+limit_top = -730
+limit_right = 5162
+limit_bottom = 350
 script = ExtResource("2_camera")
-map_rect = Rect2(0, 0, 42, 8)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1269939166]
 self_modulate = Color(1, 1, 1, 0.7176471)
-position = Vector2(-135, -2)
+position = Vector2(-140, -3)
 sprite_frames = ExtResource("2_76oj4")
-animation = &"correr"
-autoplay = "correr"
-frame_progress = 0.07147076
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.09418644
 centered = false
 offset = Vector2(0, -270)
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=79700165]
+position = Vector2(0, -135)
+shape = SubResource("RectangleShape2D_dyp2m")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=212567940]
+color = Color(1, 1, 0.34901962, 1)
