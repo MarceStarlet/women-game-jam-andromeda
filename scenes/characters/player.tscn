@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://1h8hygwkdsvx"]
+
+[ext_resource type="Script" uid="uid://dsikjabtetm7n" path="res://scripts/characters/player.gd" id="1_player"]
+
+[node name="Player" type="CharacterBody2D" unique_id=95397291]
+script = ExtResource("1_player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1957827303]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1621849533]
+position = Vector2(0, -135)
+process_callback = 0
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=324437315]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1074323093]
+offset_left = -54.0
+offset_top = -270.0
+offset_right = 54.0
+color = Color(0.85, 0.2, 0.9, 1)
