@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://b8k5cd5185o03"]
+
+[ext_resource type="Texture2D" uid="uid://c2ws2kc2r4phf" path="res://assets/Arte/escenario/Nivel 4.png" id="1_anwe6"]
+[ext_resource type="Texture2D" uid="uid://csr6b74e2unms" path="res://assets/Arte/plataformas2/4.PNG" id="3_5vn0v"]
+[ext_resource type="Texture2D" uid="uid://cra63tnena42o" path="res://assets/Arte/plataformas1/4.PNG" id="6_ts8eg"]
+[ext_resource type="Texture2D" uid="uid://catb33ia51u83" path="res://assets/Arte/capa_cercana/Nivel_4.PNG" id="7_5vn0v"]
+[ext_resource type="PackedScene" uid="uid://thn6r8r5hh27" path="res://scenes/levels/checkpoint.tscn" id="checkpoint"]
+[ext_resource type="PackedScene" path="res://scenes/levels/disappearing_platform.tscn" id="disappearing"]
+[ext_resource type="PackedScene" path="res://scenes/levels/moving_platform.tscn" id="moving"]
+
+[sub_resource type="RectangleShape2D" id="shape_1x8"]
+size = Vector2(135, 1080)
+
+[sub_resource type="RectangleShape2D" id="shape_34x1"]
+size = Vector2(4590, 135)
+
+[sub_resource type="RectangleShape2D" id="shape_3x1"]
+size = Vector2(405, 135)
+
+[sub_resource type="RectangleShape2D" id="shape_2x1"]
+size = Vector2(270, 135)
+
+[node name="Level4" type="Node2D" unique_id=2016408509]
+
+[node name="Nivel4" type="Sprite2D" parent="." unique_id=1365320023]
+position = Vector2(2835, 527)
+scale = Vector2(1.0049646, 1)
+texture = ExtResource("1_anwe6")
+
+[node name="Terrain" type="StaticBody2D" parent="." unique_id=1970848287]
+
+[node name="Block0" type="CollisionShape2D" parent="Terrain" unique_id=856445010]
+position = Vector2(-67.5, 540)
+shape = SubResource("shape_1x8")
+
+[node name="Block1" type="CollisionShape2D" parent="Terrain" unique_id=1709513511]
+position = Vector2(5737.5, 540)
+shape = SubResource("shape_1x8")
+
+[node name="Block2" type="CollisionShape2D" parent="Terrain" unique_id=265290467]
+position = Vector2(2295, 1012.5)
+shape = SubResource("shape_34x1")
+
+[node name="Look2" type="TextureRect" parent="Terrain" unique_id=1691355095]
+texture_repeat = 2
+offset_top = 945.0
+offset_right = 4590.0
+offset_bottom = 1080.0
+texture = ExtResource("3_5vn0v")
+stretch_mode = 1
+
+[node name="Block3" type="CollisionShape2D" parent="Terrain" unique_id=2091649637]
+position = Vector2(1687.5, 742.5)
+shape = SubResource("shape_3x1")
+
+[node name="Look3" type="TextureRect" parent="Terrain" unique_id=896646725]
+texture_repeat = 2
+offset_left = 1485.0
+offset_top = 675.0
+offset_right = 1890.0
+offset_bottom = 810.0
+texture = ExtResource("3_5vn0v")
+stretch_mode = 1
+
+[node name="Block4" type="CollisionShape2D" parent="Terrain" unique_id=578167133]
+position = Vector2(135, 202.5)
+shape = SubResource("shape_2x1")
+
+[node name="Look4" type="TextureRect" parent="Terrain" unique_id=1909389183]
+texture_repeat = 2
+offset_top = 135.0
+offset_right = 270.0
+offset_bottom = 270.0
+texture = ExtResource("3_5vn0v")
+stretch_mode = 1
+
+[node name="Checkpoint1" parent="." unique_id=618959458 instance=ExtResource("checkpoint")]
+position = Vector2(4252.5, 945)
+
+[node name="Checkpoint2" parent="." unique_id=1347747973 instance=ExtResource("checkpoint")]
+position = Vector2(1687.5, 675)
+
+[node name="Moving1" parent="." unique_id=2076977273 instance=ExtResource("moving")]
+position = Vector2(2565, 810)
+move_tiles = Vector2(-4, 0)
+texture = ExtResource("6_ts8eg")
+tint = Color(0.05490196, 0.023529412, 0.1764706, 1)
+
+[node name="Moving2" parent="." unique_id=304773881 instance=ExtResource("moving")]
+position = Vector2(405, 405)
+move_tiles = Vector2(2, 0)
+cycle_time = 3.0
+texture = ExtResource("6_ts8eg")
+tint = Color(0.105882354, 0.05490196, 0.30588236, 1)
+
+[node name="Disappearing1" parent="." unique_id=1307928256 instance=ExtResource("disappearing")]
+position = Vector2(1080, 540)
+texture = ExtResource("6_ts8eg")
+
+[node name="Entry" type="Marker2D" parent="." unique_id=1960798989]
+position = Vector2(4995, 945)
+
+[node name="Exit" type="Marker2D" parent="." unique_id=1610004096]
+position = Vector2(135, 135)
+
+[node name="DialogueSpot" type="Marker2D" parent="." unique_id=194782645]
+position = Vector2(1620, 675)
+
+[node name="Nivel5" type="Sprite2D" parent="." unique_id=990867951]
+position = Vector2(2830, 538)
+scale = Vector2(1.0010582, 1)
+texture = ExtResource("7_5vn0v")

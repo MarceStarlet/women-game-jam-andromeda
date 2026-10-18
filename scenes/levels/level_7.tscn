@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://bvs4ew6e6ldl3"]
+
+[ext_resource type="Texture2D" uid="uid://dvoeycefr6hou" path="res://assets/Arte/escenario/Nivel 7.png" id="1_u1w5x"]
+[ext_resource type="Texture2D" uid="uid://sq1o38erb4d1" path="res://assets/Arte/plataformas2/7.PNG" id="2_posk4"]
+[ext_resource type="Texture2D" uid="uid://m8yxh7hwi6x6" path="res://assets/Arte/plataformas1/7.PNG" id="5_sjq8i"]
+[ext_resource type="Texture2D" uid="uid://cdhchxw0mi6kr" path="res://assets/Arte/capa_cercana/Nivel_7.PNG" id="8_posk4"]
+[ext_resource type="PackedScene" uid="uid://thn6r8r5hh27" path="res://scenes/levels/checkpoint.tscn" id="checkpoint"]
+[ext_resource type="PackedScene" path="res://scenes/levels/crusher.tscn" id="crusher"]
+[ext_resource type="PackedScene" path="res://scenes/levels/goal.tscn" id="goal"]
+[ext_resource type="PackedScene" path="res://scenes/levels/moving_platform.tscn" id="moving"]
+
+[sub_resource type="RectangleShape2D" id="shape_1x8"]
+size = Vector2(135, 1080)
+
+[sub_resource type="RectangleShape2D" id="shape_28x1"]
+size = Vector2(3780, 135)
+
+[sub_resource type="RectangleShape2D" id="shape_14x1"]
+size = Vector2(1890, 135)
+
+[sub_resource type="RectangleShape2D" id="shape_6x1"]
+size = Vector2(810, 135)
+
+[node name="Level7" type="Node2D" unique_id=1696442180]
+
+[node name="Nivel7" type="Sprite2D" parent="." unique_id=894512355]
+position = Vector2(2835, 542)
+scale = Vector2(1.0035461, 1)
+texture = ExtResource("1_u1w5x")
+
+[node name="Terrain" type="StaticBody2D" parent="." unique_id=197776832]
+
+[node name="Block0" type="CollisionShape2D" parent="Terrain" unique_id=346138516]
+position = Vector2(-67.5, 540)
+shape = SubResource("shape_1x8")
+
+[node name="Look0" type="TextureRect" parent="Terrain" unique_id=1643384030]
+texture_repeat = 2
+offset_left = -135.0
+offset_bottom = 1080.0
+stretch_mode = 1
+
+[node name="Block1" type="CollisionShape2D" parent="Terrain" unique_id=783456863]
+position = Vector2(5737.5, 540)
+shape = SubResource("shape_1x8")
+
+[node name="Look1" type="TextureRect" parent="Terrain" unique_id=1616493157]
+texture_repeat = 2
+offset_left = 5670.0
+offset_right = 5805.0
+offset_bottom = 1080.0
+stretch_mode = 1
+
+[node name="Block2" type="CollisionShape2D" parent="Terrain" unique_id=766994857]
+position = Vector2(3780, 1012.5)
+shape = SubResource("shape_28x1")
+
+[node name="Look2" type="TextureRect" parent="Terrain" unique_id=612855328]
+texture_repeat = 2
+offset_left = 1890.0
+offset_top = 945.0
+offset_right = 5670.0
+offset_bottom = 1080.0
+texture = ExtResource("2_posk4")
+stretch_mode = 1
+
+[node name="Block3" type="CollisionShape2D" parent="Terrain" unique_id=915901014]
+position = Vector2(3240, 67.5)
+shape = SubResource("shape_14x1")
+
+[node name="Look3" type="TextureRect" parent="Terrain" unique_id=1608205439]
+texture_repeat = 2
+offset_left = 2295.0
+offset_right = 4185.0
+offset_bottom = 135.0
+texture = ExtResource("2_posk4")
+stretch_mode = 1
+
+[node name="Block4" type="CollisionShape2D" parent="Terrain" unique_id=2104775668]
+position = Vector2(5265, 337.5)
+shape = SubResource("shape_6x1")
+
+[node name="Look4" type="TextureRect" parent="Terrain" unique_id=152033148]
+texture_repeat = 2
+offset_left = 4860.0
+offset_top = 270.0
+offset_right = 5670.0
+offset_bottom = 405.0
+texture = ExtResource("2_posk4")
+stretch_mode = 1
+
+[node name="Checkpoint1" parent="." unique_id=1724033079 instance=ExtResource("checkpoint")]
+position = Vector2(2092.5, 945)
+
+[node name="Checkpoint2" parent="." unique_id=1508051041 instance=ExtResource("checkpoint")]
+position = Vector2(4387.5, 945)
+
+[node name="Moving1" parent="." unique_id=1040396107 instance=ExtResource("moving")]
+position = Vector2(4590, 810)
+width_tiles = 2
+move_tiles = Vector2(0, -5)
+cycle_time = 4.5
+texture = ExtResource("5_sjq8i")
+
+[node name="Crusher1" parent="." unique_id=1287227506 instance=ExtResource("crusher")]
+position = Vector2(2430, 135)
+drop_tiles = 5
+texture = ExtResource("5_sjq8i")
+
+[node name="Crusher2" parent="." unique_id=305283716 instance=ExtResource("crusher")]
+position = Vector2(2970, 135)
+drop_tiles = 5
+start_delay = 0.5
+texture = ExtResource("5_sjq8i")
+
+[node name="Crusher3" parent="." unique_id=1576832021 instance=ExtResource("crusher")]
+position = Vector2(3510, 135)
+drop_tiles = 5
+start_delay = 1.0
+texture = ExtResource("5_sjq8i")
+
+[node name="Crusher4" parent="." unique_id=63982906 instance=ExtResource("crusher")]
+position = Vector2(4050, 135)
+drop_tiles = 5
+start_delay = 1.5
+texture = ExtResource("5_sjq8i")
+
+[node name="Goal" parent="." unique_id=1204586587 instance=ExtResource("goal")]
+position = Vector2(5332.5, 270)
+script = null
+
+[node name="Entry" type="Marker2D" parent="." unique_id=653917617]
+position = Vector2(1350, 945)
+
+[node name="DialogueSpot" type="Marker2D" parent="." unique_id=954266273]
+position = Vector2(2160, 945)
+
+[node name="Nivel8" type="Sprite2D" parent="." unique_id=240999362]
+position = Vector2(2839, 542)
+texture = ExtResource("8_posk4")

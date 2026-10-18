@@ -25,7 +25,7 @@ const BODY_SIZE := Vector2(0.8, 2.0) * TILE  # 2 unidades de alto (108 x 270 px)
 @export var deadly_fall := 6.0 * TILE
 @export var drain_zone := 3.0 * TILE   # zona baja desde el inicio donde se drena la vitali
 @export var drain_rate := 0.3          # vitali por segundo (aumenta con la profundidad)
-@export var kill_y := 5000.0
+@export var kill_y := 100000.0      # red de seguridad: muy abajo de todo el mapa (10800 px)
 
 @onready var light: PointLight2D = $PointLight2D
 
@@ -137,7 +137,7 @@ func _land() -> void:
 
 func add_glow(amount: float) -> void:
 	glow = clampf(glow + amount, 0.0, max_glow)
-	light.energy = lerpf(0.2, 1.6, glow / max_glow)
+	light.energy = lerpf(0.1, 0.7, glow / max_glow)
 	light.texture_scale = lerpf(1.0, 6.0, glow / max_glow)
 	glow_changed.emit(glow, max_glow)
 	if glow <= 0.0:

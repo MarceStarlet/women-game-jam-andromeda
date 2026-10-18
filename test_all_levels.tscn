@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/levels/level_3.tscn" id="l3"]
+[ext_resource type="PackedScene" path="res://scenes/levels/level_4.tscn" id="l4"]
+[ext_resource type="PackedScene" path="res://scenes/levels/level_5.tscn" id="l5"]
+[ext_resource type="PackedScene" path="res://scenes/levels/level_6.tscn" id="l6"]
+[ext_resource type="PackedScene" path="res://scenes/levels/level_7.tscn" id="l7"]
+[ext_resource type="PackedScene" path="res://scenes/characters/player.tscn" id="player"]
+
+[node name="TestAllLevels" type="Node2D"]
+
+[node name="Level7" parent="." instance=ExtResource("l7")]
+
+[node name="Level6" parent="." instance=ExtResource("l6")]
+position = Vector2(0, 1080)
+
+[node name="Level5" parent="." instance=ExtResource("l5")]
+position = Vector2(0, 2160)
+
+[node name="Level4" parent="." instance=ExtResource("l4")]
+position = Vector2(0, 3240)
+
+[node name="Level3" parent="." instance=ExtResource("l3")]
+position = Vector2(0, 4320)
+
+[node name="Player" parent="." instance=ExtResource("player")]
+position = Vector2(877.5, 5240)
+
+[node name="Camera2D" parent="Player"]
+use_limits = true
+map_rect = Rect2(0, 0, 5670, 5400)

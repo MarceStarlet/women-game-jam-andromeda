@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="women-game-jam-andromeda"
-run/main_scene="uid://cvqvus0yuicco"
+run/main_scene="uid://d320jvqts0cgu"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

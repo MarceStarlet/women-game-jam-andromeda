@@ -1,0 +1,302 @@
+[gd_scene format=3 uid="uid://ci3wyjc1dv5by"]
+
+[ext_resource type="Texture2D" uid="uid://jpgix376ka6b" path="res://assets/Arte/escenario/Nivel 3.png" id="1_fmg3e"]
+[ext_resource type="Texture2D" uid="uid://m1l1gqv384im" path="res://assets/Arte/plataformas2/3.PNG" id="2_ftfob"]
+[ext_resource type="Texture2D" uid="uid://cj0pljbx3yxvk" path="res://assets/Arte/capa_cercana/Nivel_3.PNG" id="3_ugcn1"]
+[ext_resource type="Texture2D" uid="uid://l4064ojdmfpp" path="res://assets/Arte/plataformas1/3.PNG" id="6_fkk1g"]
+[ext_resource type="PackedScene" uid="uid://thn6r8r5hh27" path="res://scenes/levels/checkpoint.tscn" id="checkpoint"]
+[ext_resource type="PackedScene" path="res://scenes/levels/crusher.tscn" id="crusher"]
+[ext_resource type="PackedScene" path="res://scenes/levels/moving_platform.tscn" id="moving"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fkk1g"]
+texture = ExtResource("2_ftfob")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jbfhr"]
+occlusion_layer_0/light_mask = 1
+sources/0 = SubResource("TileSetAtlasSource_fkk1g")
+
+[sub_resource type="RectangleShape2D" id="shape_1x8"]
+size = Vector2(135, 1080)
+
+[sub_resource type="RectangleShape2D" id="shape_10x1"]
+size = Vector2(1350, 135)
+
+[sub_resource type="RectangleShape2D" id="shape_5x1"]
+size = Vector2(675, 135)
+
+[sub_resource type="RectangleShape2D" id="shape_12x3"]
+size = Vector2(1620, 405)
+
+[sub_resource type="RectangleShape2D" id="shape_2x1"]
+size = Vector2(270, 135)
+
+[sub_resource type="RectangleShape2D" id="shape_6x1"]
+size = Vector2(810, 135)
+
+[node name="Level3" type="Node2D" unique_id=1157714119]
+
+[node name="Nivel3" type="Sprite2D" parent="." unique_id=294203825]
+position = Vector2(2830.5, 542)
+scale = Vector2(1.005851, 1)
+texture = ExtResource("1_fmg3e")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Nivel3" unique_id=1193825476]
+tile_set = SubResource("TileSet_jbfhr")
+
+[node name="Nivel4" type="Sprite2D" parent="Nivel3" unique_id=1062415623]
+position = Vector2(2.9826782, -2.000063)
+scale = Vector2(0.99365705, 0.9981516)
+texture = ExtResource("3_ugcn1")
+
+[node name="Terrain" type="StaticBody2D" parent="." unique_id=798060768]
+
+[node name="Block0" type="CollisionShape2D" parent="Terrain" unique_id=100411329]
+position = Vector2(-67.5, 540)
+shape = SubResource("shape_1x8")
+
+[node name="Block1" type="CollisionShape2D" parent="Terrain" unique_id=100044339]
+position = Vector2(5737.5, 540)
+shape = SubResource("shape_1x8")
+
+[node name="Block2" type="CollisionShape2D" parent="Terrain" unique_id=1026826304]
+position = Vector2(1215, 1012.5)
+shape = SubResource("shape_10x1")
+
+[node name="Look2" type="TextureRect" parent="Terrain/Block2" unique_id=1710761766]
+texture_repeat = 2
+offset_left = -675.0
+offset_top = -67.5
+offset_right = 675.0
+offset_bottom = 67.5
+texture = ExtResource("2_ftfob")
+stretch_mode = 1
+
+[node name="Block3" type="CollisionShape2D" parent="Terrain" unique_id=1036015609]
+position = Vector2(1957.5, 472.5)
+shape = SubResource("shape_5x1")
+
+[node name="Look3" type="TextureRect" parent="Terrain" unique_id=1016600651]
+texture_repeat = 2
+offset_left = 1620.0
+offset_top = 405.0
+offset_right = 2295.0
+offset_bottom = 540.0
+texture = ExtResource("2_ftfob")
+stretch_mode = 1
+
+[node name="Block4" type="CollisionShape2D" parent="Terrain" unique_id=1816024852]
+position = Vector2(3105, 877.5)
+shape = SubResource("shape_12x3")
+
+[node name="Look4" type="TextureRect" parent="Terrain" unique_id=550935433]
+texture_repeat = 2
+offset_left = 2295.0
+offset_top = 675.0
+offset_right = 3915.0
+offset_bottom = 1080.0
+texture = ExtResource("2_ftfob")
+stretch_mode = 1
+
+[node name="Block5" type="CollisionShape2D" parent="Terrain" unique_id=806788317]
+position = Vector2(3105, 67.5)
+shape = SubResource("shape_10x1")
+
+[node name="Look5" type="TextureRect" parent="Terrain" unique_id=1960100884]
+texture_repeat = 2
+offset_left = 2430.0
+offset_right = 3780.0
+offset_bottom = 135.0
+texture = ExtResource("2_ftfob")
+stretch_mode = 1
+
+[node name="Block6" type="CollisionShape2D" parent="Terrain" unique_id=941279546]
+position = Vector2(4320, 742.5)
+shape = SubResource("shape_2x1")
+
+[node name="Look6" type="TextureRect" parent="Terrain" unique_id=853021734]
+texture_repeat = 2
+offset_left = 4185.0
+offset_top = 675.0
+offset_right = 4455.0
+offset_bottom = 810.0
+texture = ExtResource("2_ftfob")
+stretch_mode = 1
+
+[node name="Block7" type="CollisionShape2D" parent="Terrain" unique_id=854868677]
+position = Vector2(5265, 337.5)
+shape = SubResource("shape_6x1")
+
+[node name="Look7" type="TextureRect" parent="Terrain" unique_id=744113309]
+texture_repeat = 2
+offset_left = 4860.0
+offset_top = 270.0
+offset_right = 5670.0
+offset_bottom = 405.0
+texture = ExtResource("2_ftfob")
+stretch_mode = 1
+
+[node name="Checkpoint1" parent="." unique_id=1909855921 instance=ExtResource("checkpoint")]
+position = Vector2(877.5, 945)
+
+[node name="Checkpoint2" parent="." unique_id=648476810 instance=ExtResource("checkpoint")]
+position = Vector2(2362.5, 675)
+
+[node name="Moving1" parent="." unique_id=425726701 instance=ExtResource("moving")]
+position = Vector2(1350, 810)
+width_tiles = 2
+move_tiles = Vector2(0, -4)
+texture = ExtResource("6_fkk1g")
+
+[node name="Moving2" parent="." unique_id=101918452 instance=ExtResource("moving")]
+position = Vector2(4590, 675)
+width_tiles = 2
+move_tiles = Vector2(0, -4)
+texture = ExtResource("6_fkk1g")
+
+[node name="Crusher1" parent="." unique_id=173563346 instance=ExtResource("crusher")]
+position = Vector2(2700, 135)
+
+[node name="Crusher2" parent="." unique_id=1811958642 instance=ExtResource("crusher")]
+position = Vector2(3105, 135)
+start_delay = 0.7
+
+[node name="Crusher3" parent="." unique_id=2102719528 instance=ExtResource("crusher")]
+position = Vector2(3510, 135)
+start_delay = 1.4
+
+[node name="Entry" type="Marker2D" parent="." unique_id=1563294992]
+position = Vector2(270, 945)
+
+[node name="Exit" type="Marker2D" parent="." unique_id=2011037399]
+position = Vector2(5265, 270)
+
+[node name="DialogueSpot" type="Marker2D" parent="." unique_id=1915535473]
+position = Vector2(2970, 675)

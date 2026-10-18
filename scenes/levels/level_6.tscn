@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://b7uvj125tymtb"]
+
+[ext_resource type="Texture2D" uid="uid://c1xub5fu45uag" path="res://assets/Arte/escenario/Nivel 6.png" id="1_741xk"]
+[ext_resource type="Texture2D" uid="uid://c7l6m0cxn61cl" path="res://assets/Arte/plataformas2/6.PNG" id="1_y2agi"]
+[ext_resource type="Texture2D" uid="uid://cm7pbelcjt53o" path="res://assets/Arte/plataformas1/6.PNG" id="2_g44gb"]
+[ext_resource type="Texture2D" uid="uid://7ckeyt0cdwuf" path="res://assets/Arte/capa_cercana/Nivel_6.PNG" id="5_i0fhw"]
+[ext_resource type="PackedScene" uid="uid://thn6r8r5hh27" path="res://scenes/levels/checkpoint.tscn" id="checkpoint"]
+
+[sub_resource type="RectangleShape2D" id="shape_1x8"]
+size = Vector2(135, 1080)
+
+[sub_resource type="RectangleShape2D" id="shape_34x1"]
+size = Vector2(4590, 135)
+
+[sub_resource type="RectangleShape2D" id="shape_3x1"]
+size = Vector2(405, 135)
+
+[sub_resource type="RectangleShape2D" id="shape_4x3"]
+size = Vector2(540, 405)
+
+[sub_resource type="RectangleShape2D" id="shape_4x1"]
+size = Vector2(540, 135)
+
+[sub_resource type="RectangleShape2D" id="shape_5x1"]
+size = Vector2(675, 135)
+
+[sub_resource type="RectangleShape2D" id="shape_2x1"]
+size = Vector2(270, 135)
+
+[node name="Level6" type="Node2D" unique_id=1562734229]
+
+[node name="Nivel6" type="Sprite2D" parent="." unique_id=803305678]
+position = Vector2(2830, 543)
+scale = Vector2(1.0049646, 1)
+texture = ExtResource("1_741xk")
+
+[node name="Terrain" type="StaticBody2D" parent="." unique_id=1338263069]
+
+[node name="Block0" type="CollisionShape2D" parent="Terrain" unique_id=137458454]
+position = Vector2(-67.5, 540)
+shape = SubResource("shape_1x8")
+
+[node name="Look0" type="TextureRect" parent="Terrain" unique_id=1318902133]
+texture_repeat = 2
+offset_left = -135.0
+offset_bottom = 1080.0
+stretch_mode = 1
+
+[node name="Block1" type="CollisionShape2D" parent="Terrain" unique_id=113387986]
+position = Vector2(5737.5, 540)
+shape = SubResource("shape_1x8")
+
+[node name="Look1" type="TextureRect" parent="Terrain" unique_id=1153785975]
+texture_repeat = 2
+offset_left = 5670.0
+offset_right = 5805.0
+offset_bottom = 1080.0
+stretch_mode = 1
+
+[node name="Block2" type="CollisionShape2D" parent="Terrain" unique_id=691694957]
+position = Vector2(2295, 1012.5)
+shape = SubResource("shape_34x1")
+
+[node name="Look2" type="TextureRect" parent="Terrain" unique_id=372795542]
+texture_repeat = 2
+offset_top = 945.0
+offset_right = 4590.0
+offset_bottom = 1080.0
+texture = ExtResource("1_y2agi")
+stretch_mode = 1
+
+[node name="Block3" type="CollisionShape2D" parent="Terrain" unique_id=1500996224]
+position = Vector2(3037.5, 742.5)
+shape = SubResource("shape_3x1")
+
+[node name="Look3" type="TextureRect" parent="Terrain" unique_id=1314609799]
+texture_repeat = 2
+offset_left = 2835.0
+offset_top = 675.0
+offset_right = 3240.0
+offset_bottom = 810.0
+texture = ExtResource("2_g44gb")
+stretch_mode = 1
+
+[node name="Block4" type="CollisionShape2D" parent="Terrain" unique_id=1630407086]
+position = Vector2(2430, 742.5)
+shape = SubResource("shape_4x3")
+
+[node name="Look4" type="TextureRect" parent="Terrain" unique_id=1942145124]
+texture_repeat = 2
+offset_left = 2160.0
+offset_top = 540.0
+offset_right = 2700.0
+offset_bottom = 945.0
+texture = ExtResource("1_y2agi")
+stretch_mode = 1
+
+[node name="Block5" type="CollisionShape2D" parent="Terrain" unique_id=1199692158]
+position = Vector2(1620, 472.5)
+shape = SubResource("shape_4x1")
+
+[node name="Look5" type="TextureRect" parent="Terrain" unique_id=17317362]
+texture_repeat = 2
+offset_left = 1350.0
+offset_top = 405.0
+offset_right = 1890.0
+offset_bottom = 540.0
+texture = ExtResource("1_y2agi")
+stretch_mode = 1
+
+[node name="Block6" type="CollisionShape2D" parent="Terrain" unique_id=1969769899]
+position = Vector2(742.5, 337.5)
+shape = SubResource("shape_5x1")
+
+[node name="Look6" type="TextureRect" parent="Terrain" unique_id=535616643]
+texture_repeat = 2
+offset_left = 405.0
+offset_top = 270.0
+offset_right = 1080.0
+offset_bottom = 405.0
+texture = ExtResource("2_g44gb")
+stretch_mode = 1
+
+[node name="Block7" type="CollisionShape2D" parent="Terrain" unique_id=886083240]
+position = Vector2(1215, 202.5)
+shape = SubResource("shape_2x1")
+
+[node name="Look7" type="TextureRect" parent="Terrain" unique_id=754568629]
+texture_repeat = 2
+offset_left = 1080.0
+offset_top = 135.0
+offset_right = 1350.0
+offset_bottom = 270.0
+texture = ExtResource("1_y2agi")
+stretch_mode = 1
+
+[node name="Block8" type="CollisionShape2D" parent="Terrain" unique_id=694429388]
+position = Vector2(1215, 742.5)
+shape = SubResource("shape_2x1")
+
+[node name="Look8" type="TextureRect" parent="Terrain" unique_id=617056293]
+texture_repeat = 2
+offset_left = 1080.0
+offset_top = 675.0
+offset_right = 1350.0
+offset_bottom = 810.0
+texture = ExtResource("1_y2agi")
+stretch_mode = 1
+
+[node name="Checkpoint1" parent="." unique_id=1867489427 instance=ExtResource("checkpoint")]
+position = Vector2(4117.5, 945)
+
+[node name="Checkpoint2" parent="." unique_id=1978024063 instance=ExtResource("checkpoint")]
+position = Vector2(607.5, 270)
+
+[node name="Entry" type="Marker2D" parent="." unique_id=2115889008]
+position = Vector2(4995, 945)
+
+[node name="Exit" type="Marker2D" parent="." unique_id=1635960894]
+position = Vector2(1215, 135)
+
+[node name="DialogueSpot" type="Marker2D" parent="." unique_id=246759175]
+position = Vector2(3510, 945)
+
+[node name="Nivel7" type="Sprite2D" parent="." unique_id=943499433]
+position = Vector2(2833, 538)
+texture = ExtResource("5_i0fhw")
