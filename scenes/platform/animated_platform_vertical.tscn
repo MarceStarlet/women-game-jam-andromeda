@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ctnuxkxdfbydu"]
+
+[ext_resource type="PackedScene" uid="uid://dqlam6ojskj74" path="res://scenes/platform/animated_platform_vertical_body.tscn" id="1_05ew8"]
+
+[node name="AnimatedPlatformVertical" type="Node2D" unique_id=686158297]
+
+[node name="AnimatableBody2DB1" parent="." unique_id=543312767 instance=ExtResource("1_05ew8")]
