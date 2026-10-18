@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4o70bdqshatx"
-path="res://.godot/imported/salir_hover.png-43d045018d26b1ee946c46b15107dace.ctex"
+path="res://.godot/imported/salir_hover.png-623c1e8f57b5d435b40ac5bf7792e71f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/arte/UI/salir_hover.png"
-dest_files=["res://.godot/imported/salir_hover.png-43d045018d26b1ee946c46b15107dace.ctex"]
+source_file="res://assets/Arte/UI/salir_hover.png"
+dest_files=["res://.godot/imported/salir_hover.png-623c1e8f57b5d435b40ac5bf7792e71f.ctex"]
 
 [params]
 

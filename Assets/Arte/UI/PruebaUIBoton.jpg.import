@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nooqq1ii0uyy"
-path="res://.godot/imported/PruebaUIBoton.jpg-106b7b6dc91bef8798ac10e4dac1d3b1.ctex"
+path="res://.godot/imported/PruebaUIBoton.jpg-0094f435dd9cc4574f3e767ef47a3f3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/arte/UI/PruebaUIBoton.jpg"
-dest_files=["res://.godot/imported/PruebaUIBoton.jpg-106b7b6dc91bef8798ac10e4dac1d3b1.ctex"]
+source_file="res://assets/Arte/UI/PruebaUIBoton.jpg"
+dest_files=["res://.godot/imported/PruebaUIBoton.jpg-0094f435dd9cc4574f3e767ef47a3f3d.ctex"]
 
 [params]
 

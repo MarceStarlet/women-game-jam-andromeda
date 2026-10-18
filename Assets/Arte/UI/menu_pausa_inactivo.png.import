@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4egjcd0m7jok"
-path="res://.godot/imported/menu_pausa_inactivo.png-b60c75b8e2bceb2c6cdc25f02c86246a.ctex"
+path="res://.godot/imported/menu_pausa_inactivo.png-c261c65365aecb295625996e1577871d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/arte/UI/menu_pausa_inactivo.png"
-dest_files=["res://.godot/imported/menu_pausa_inactivo.png-b60c75b8e2bceb2c6cdc25f02c86246a.ctex"]
+source_file="res://assets/Arte/UI/menu_pausa_inactivo.png"
+dest_files=["res://.godot/imported/menu_pausa_inactivo.png-c261c65365aecb295625996e1577871d.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2ws2kc2r4phf"
-path="res://.godot/imported/Nivel 4.png-8de24daccd27ab5064439f11b2dfd6fe.ctex"
+path="res://.godot/imported/Nivel 4.png-89d88f25bf0a27f1aceb592ebb84ac9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/arte/escenario/Nivel 4.png"
-dest_files=["res://.godot/imported/Nivel 4.png-8de24daccd27ab5064439f11b2dfd6fe.ctex"]
+source_file="res://assets/Arte/escenario/Nivel 4.png"
+dest_files=["res://.godot/imported/Nivel 4.png-89d88f25bf0a27f1aceb592ebb84ac9e.ctex"]
 
 [params]
 
